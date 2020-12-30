@@ -3,7 +3,7 @@
         <div class="user-profile-user-panel">
             <h1 class="user-profile-username">@{{state.user.username}}</h1>
             <div class="user-profile-admin-badge" v-if="state.user.isAdmin">Admin</div>
-
+            <h2>{{ userId }}</h2>
             <div class="user-profile-follower-count">
                 <strong>Followers:</strong>{{state.followers}}
             </div>
@@ -35,7 +35,7 @@ export default {
 
         const state = reactive ({
         followers: 0, 
-        user: users[userId.value - 1] || users[0]
+        user: users[userId.value - 1] || users[2]
     })
     
     function newTwoot(newTwootContent)

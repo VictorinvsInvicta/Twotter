@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <h1>Home</h1>
-    <div class="user-list">
-      <router-link v-for="user in users" :to="{name: 'UserProfile', params: {userId: user.Id } }" :key="user.id">
+    <div class="users-list">
+      <router-link v-for="user in users" :to="{name: 'UserProfile', params: {userId: user.id } }" :key="user.id">
         {{ user.username }}
       </router-link>
     </div>
